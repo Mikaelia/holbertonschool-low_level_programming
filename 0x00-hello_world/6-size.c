@@ -1,3 +1,5 @@
+#include<stdio>
+
 /**
  * main - Entry point
  *
