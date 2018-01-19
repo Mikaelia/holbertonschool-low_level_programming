@@ -15,6 +15,7 @@ int main(void)
 		for (j = 48; j <= 57; j++)
 		{	putchar(i);
 			putchar(j);
+			if (i + j != 114)
 			putchar(44);
 		}
 	}
