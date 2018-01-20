@@ -64,10 +64,10 @@
 	- Numbers should be printed in ascending order, with two digits
 	- You can only use the `putchar` function
 	- You can only use `putchar` five times maximum in your code
-	- You are not allowed to use any variable of type `char`
+	- You are not allowed to use any variable of type `char`.
 
 ### Advanced
-	**[100-print_comb3.c](100-print_comb3.c)** - Write a program that prints all possible different combinations of two digits.
+**[100-print_comb3.c](100-print_comb3.c)** - Write a program that prints all possible different combinations of two digits.
 
 	- The two digits must be different
 	- 01 and 10 are considered the same combination of the two digits 0 and 1
