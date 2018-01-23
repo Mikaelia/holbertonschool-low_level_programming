@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - Entry point
+ * print_alphabet - print lowercase alphabet
  *
  * Return: Always 0 (Success)
  */
@@ -14,9 +14,3 @@ void print_alphabet(void)
 			_putchar(i);
 		_putchar('\n');
 	}
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
