@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
  */
 
-void printString(char *message)
+ void printString(char *message)
 {
 	int i;
 	int count = 0;
