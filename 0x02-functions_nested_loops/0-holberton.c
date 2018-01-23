@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include "holberton.h"
+#include <string.h>
 
 /**
  * main - Entry point
@@ -16,7 +18,7 @@ void printString(char *message)
 		count++;
 	}
 	for (i = 0; i < count; ++i)
-		putchar(message[i]);
+		_putchar(message[i]);
 }
 int main(void)
 {
