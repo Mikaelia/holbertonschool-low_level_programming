@@ -19,3 +19,9 @@ void printString(char *message)
 		_putchar(message[i]);
 }
 
+int main ()
+{	
+	char *message = "Holberton\n";
+	printString(message);
+	return(0);
+}
