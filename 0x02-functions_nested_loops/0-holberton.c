@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
- * printString - prints string
+ * main - Always 0.
+ * printString(message) - prints string.
  *
  * Return: Always 0 (Success)
  */
@@ -19,9 +20,10 @@ void printString(char *message)
 		_putchar(message[i]);
 }
 
-int main ()
-{	
+int main(void)
+{
 	char *message = "Holberton\n";
+
 	printString(message);
-	return(0);
+	return (0);
 }
