@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet_x10 - prints 10x alphabet
  *
  * Return: Always 0 (Success)
  */
