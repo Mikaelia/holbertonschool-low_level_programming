@@ -1,6 +1,6 @@
 # 0x02. C - Functions, nested loops
   
-####An introductory project on:
+#### An introductory project on:
 - Nested loops and how to use them
 - The use of functions
 - The use of header files
