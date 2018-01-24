@@ -1,13 +1,10 @@
 # 0x02. C - Functions, nested loops
   
-An introductory project on:
+####An introductory project on:
 - Nested loops and how to use them
 - The use of functions
 - The use of header files
 
-#### How to print text using printf, puts and putchar
-#### How to get the size of a specific type using the unary operator sizeof
-#### How to compile using gcc
 ## Requirements
 - Use of the standard library not permitted. Use of functions such as printf, puts, etc… is forbidden
 - Use of function _putchar is permitted
