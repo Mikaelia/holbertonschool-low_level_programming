@@ -1,29 +1,22 @@
 #include "holberton.h"
 
+
 /**
- * main - Always 0.
- * printString(message) - prints string.
+ * main - check the code for Holberton School students.
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
-
-void printString(char *message)
-{
-	int i;
-	int count = 0;
-
-	while (message[count] != '\0')
-	{
-		count++;
-	}
-	for (i = 0; i < count; ++i)
-		_putchar(message[i]);
-}
-
 int main(void)
 {
-	char *message = "Holberton\n";
-
-	printString(message);
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
 	return (0);
 }
