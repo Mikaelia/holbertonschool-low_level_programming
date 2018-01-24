@@ -1,1 +1,42 @@
-I am a readme
+# 0x02. C - Functions, nested loops
+  
+An introductory project on:
+- Nested loops and how to use them
+- The use of functions
+- The use of header files
+
+#### How to print text using printf, puts and putchar
+#### How to get the size of a specific type using the unary operator sizeof
+#### How to compile using gcc
+## Requirements
+- Use of the standard library not permitted. Use of functions such as printf, puts, etc… is forbidden
+- Use of function _putchar is permitted
+- Main files added at compilation
+- The prototypes of all functions and the prototype of the function _putchar will be included in the header file `holberton.h`
+
+## Challenges
+
+**[0-holberton.c](0-holberton.c)** - A program that prints Holberton, followed by a new line
+
+**[1-alphabet.c](1-alphabet.c)** - A function that prints the alphabet, in lowercase, followed by a new line
+
+**[2-print_alphabet_x10.c](2-print_alphabet_x10.c)** - A function that prints 10 times the alphabet, in lowercase, followed by a new line
+
+**[3-islower.c](3-islower.c)** - A function that checks for lowercase character
+
+**[4-isalpha.c](4-isalpha.c)** - A function that checks for alphabetic character
+
+**[5-sign.c](5-sign.c)** - A function that prints the sign of a number
+
+**[6-abs.c](6-abs.c)** - A function that computes the absolute value of an integer
+
+**[7-print_last_digit.c](7-print_last_digit.c)** - A function that prints the last digit of a number
+
+**[8-24_hours.c](8-24_hours.c)** - A function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59
+
+**[9-times_table.c](9-times_table.c)** - A function that prints the 9 times table, starting with 0
+
+**[10-add.c](10-add.c)** - A function that adds two integers and returns the result
+
+**[11-print_to_98.c](11-print_to_98.c)** - A function that prints all natural numbers from n to 98, followed by a new line
+
