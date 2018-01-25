@@ -13,7 +13,7 @@ int main(void)
 	long int prev = 1;
 
 	printf("%ld, %ld, ", prev, oldsum);
-	for (i = 2; i <= 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		sum = oldsum + prev;
 		prev = oldsum;
