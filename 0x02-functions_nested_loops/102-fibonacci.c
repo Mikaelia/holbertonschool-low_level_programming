@@ -18,7 +18,10 @@ int main(void)
 		sum = oldsum + prev;
 		prev = oldsum;
 		oldsum = sum;
-		printf("%ld, ", sum);
+		if (i < 50)
+			printf("%ld, ", sum);
+		else
+			printf("%ld", sum);
 	}
 	printf("\n");
 	return (0);
