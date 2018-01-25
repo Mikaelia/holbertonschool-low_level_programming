@@ -21,6 +21,7 @@ int main(void)
 		if (sum < 4000000 && sum % 2 == 0)
 			totalsum += sum;
 	}
+	totalsum = totalsum + 2;
 	printf("%ld", totalsum);
 	printf("\n");
 	return (0);
