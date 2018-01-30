@@ -1,13 +1,12 @@
 #include "holberton.h"
 /**
- * print_rev - prints a string, in reverse, followed by a new line
- *
- * @s: points to string
+ * rev_string - reverses a string
  *
  * Return: void
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
+
 	int count;
 	int i;
 
@@ -21,8 +20,7 @@ void print_rev(char *s)
 
 	while (count >= 0)
 	{
-		_putchar(s[count]);
+		s[i] = (s[count]);
 		count--;
 	}
-	_putchar('\n');
 }
