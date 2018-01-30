@@ -11,7 +11,7 @@ void print_rev(char *s)
 	int count;
 	int i;
 
-	i = 1;
+	i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -21,7 +21,7 @@ void print_rev(char *s)
 
 	while (count >= 0)
 	{
-		_putchar(s[count]);
+		_putchar(s[count - 1]);
 		count--;
 	}
 	_putchar('\n');
