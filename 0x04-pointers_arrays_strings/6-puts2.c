@@ -20,12 +20,18 @@ void puts2(char *str)
 		strlen++;
 		i++;
 	}
+
 	j = 0;
 
-	while (j <= (strlen - 2))
+	if (strlen >= 2)
 	{
-		_putchar((str[j]));
-		j += 2;
+		while (j <= (strlen - 2))
+		{
+			_putchar((str[j]));
+			j += 2;
+		}
 	}
+	else
+		_putchar(str[j]);
 	_putchar('\n');
 }
