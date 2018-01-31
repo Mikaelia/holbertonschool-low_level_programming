@@ -23,15 +23,10 @@ void puts2(char *str)
 
 	j = 0;
 
-	if (strlen >= 2)
+	while (j <= (strlen - 1))
 	{
-		while (j <= (strlen - 2))
-		{
-			_putchar((str[j]));
-			j += 2;
-		}
+		_putchar((str[j]));
+		j += 2;
 	}
-	else
-		_putchar(str[j]);
 	_putchar('\n');
 }

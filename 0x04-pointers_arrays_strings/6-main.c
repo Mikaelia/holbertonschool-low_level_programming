@@ -9,7 +9,7 @@ int main(void)
 {
 	    char *str;
 
-	        str = "0";
+	        str = "02";
 		    puts2(str);
 		        return (0);
 
