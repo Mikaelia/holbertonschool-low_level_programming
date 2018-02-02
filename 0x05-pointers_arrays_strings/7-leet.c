@@ -18,7 +18,7 @@ char *leet(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for(j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)
 		{
 			if (s[i] == lower[j] || s[i] == upper[j])
 				s[i] = nums[j];
