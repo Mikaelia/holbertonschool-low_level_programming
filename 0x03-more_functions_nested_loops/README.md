@@ -1,7 +1,7 @@
 
 # 0x03. C - More functions, more nested loops
   
-#### An introductory project on:
+#### A project on:
 - Nested loops
 - Functions and prototypes
 - The use of header files
