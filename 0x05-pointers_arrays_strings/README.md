@@ -14,11 +14,11 @@
 ## Challenges
 
 **[0-strcat.c](0-strcat.c)** - A function that concatenates two strings
-	- It returns a pointer `dest`
+- It returns a pointer `dest`
 
 **[1-strncat.c](1-strncat.c)** - A function that concatenates two strings
-	- It will use at most n bytes from `src`
-	- It returns a pointer `dest`
+- It will use at most n bytes from `src`
+- It returns a pointer `dest`
 
 **[2-strncpy.c](2-strncpy.c)** - A function that copies a string
 
