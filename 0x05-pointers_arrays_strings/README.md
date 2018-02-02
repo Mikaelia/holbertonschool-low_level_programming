@@ -1,4 +1,4 @@
-#0x05. C - More Pointers, Arrays and Strings
+# 0x05. C - More Pointers, Arrays and Strings
   
 #### A project on:
 - Pointers, arrays, and the differences between them
