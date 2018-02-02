@@ -29,7 +29,7 @@
 
 **[7-puts_half.c](7-puts_half.c)** - A function that prints half of a string, followed by a new line
 
-**[8-print_array.c](8-print_array.c)** - A function that  that prints n elements of an array of integers, followed by a new line
+**[8-print_array.c](8-print_array.c)** - A function that prints n elements of an array of integers, followed by a new line
 
-**[9-strcpy.c](9-strcpy.c)** - copies the string pointed to by `src`, including the terminating null byte (\0), to the buffer pointed to by `dest`
+**[9-strcpy.c](9-strcpy.c)** - A function that copies the string pointed to by `src`, including the terminating null byte (\0), to the buffer pointed to by `dest`
 
