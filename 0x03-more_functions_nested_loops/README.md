@@ -14,20 +14,20 @@
 
 ## Challenges
 
-**[0-isupper.c](0-isupper.c)** - A function that checks for an uppercase character.
+**[0-isupper.c](0-isupper.c)** - A function that checks for an uppercase character
 
-**[1-isdigit.c](1-isdigit.c)** - A function that checks for a digit (0 through 9).
+**[1-isdigit.c](1-isdigit.c)** - A function that checks for a digit (0 through 9)
 
 **[2-mul.c](2-mul.c)** - A function that multiplies two integers
 
-**[3-print_numbers.c](3-print_numbers.c)** - A function that prints the numbers, from 0 to 9, followed by a new line.
+**[3-print_numbers.c](3-print_numbers.c)** - A function that prints the numbers, from 0 to 9, followed by a new line
 
-**[4-print_most_numbers.c](4-print_most_numbers.c)** - A function that prints the numbers, from 0 to 9, followed by a new line.
-	- Does not print 2 or 4
+**[4-print_most_numbers.c](4-print_most_numbers.c)** - A function that prints the numbers, from 0 to 9, followed by a new line
+- Does not print 2 or 4
 
 **[5-more_numbers.c](5-more_numbers.c)** - A function that prints 10 times the numbers 0 to 14, followed by a new line
 
-**[6-print_line.c](6-print_line.c)** - A function that draws a straight line in the termina
+**[6-print_line.c](6-print_line.c)** - A function that draws a straight line in the terminal
 
 **[7-print_diagonal.c](7-print_diagonal.c)** - A function that draws a diagonal line on the terminal
 
@@ -39,5 +39,5 @@
 
 ## Advanced
 
-**[100-prime_factor.c](100-prime_factor.c)** - a program that finds and prints the largest prime factor of the number 612852475143, followed by a new line
+**[100-prime_factor.c](100-prime_factor.c)** - A program that finds and prints the largest prime factor of the number 612852475143, followed by a new line
 
