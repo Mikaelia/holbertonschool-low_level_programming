@@ -1,9 +1,9 @@
 # 0x00-hello_world
   
-A project on:
-#### How to print text using printf, puts and putchar
-#### How to get the size of a specific type using the unary operator sizeof
-#### How to compile using gcc
+### A project on:
+- Printing text using printf, puts and putchar
+- Using the unary operator sizeof
+- How to compile using gcc
 ## Requirements
 - Allowed editors: vim, emacs
 - All scripts tested on Ubuntu 14.04 LTS
