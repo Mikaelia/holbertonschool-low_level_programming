@@ -1,6 +1,5 @@
 /**
-  *
-  * *_memset - A function that fills memory with a constant byte
+  * _memset - A function that fills memory with a constant byte
   * @s: buffer
   * @b: constant byte
   * @n: bytes of memory to fill
