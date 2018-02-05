@@ -17,16 +17,13 @@ char *_strchr(char *s, char c)
 			s = &s[i];
 			return (s);
 		}
-		if (c  == '\0')
-		{
-			if (s[i] == '\0')
-			{
-				s = &s[i];
-				return (s);
-			}
-		}
 	}
-	s = 0;
-	return (s);
+	if (c  == '\0')
+	{
+		s = &s[i];
+		return (s);
+	}
+	else
+		return(0);
 }
 
