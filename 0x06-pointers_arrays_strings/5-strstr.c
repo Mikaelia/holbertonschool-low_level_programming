@@ -5,7 +5,7 @@
   * Return: num bytes in string
   *
   */
-int _findlen(*s)
+int _findlen(char *s)
 {
 	int count;
 
