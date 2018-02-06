@@ -1,0 +1,45 @@
+int _findlen(char *s)
+{
+	int i;
+	int length;
+	length = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+		length++;
+	return length;
+}
+
+/**
+  * *_strpbrk -  searches a string for any of a set of bytes
+  * @s: string to search for bytes in accept
+  * @accept: charset to use in searching string
+  *
+  * Return: num bytes in segment of s which consist only of bytes from accept
+  *
+  */
+int _findlen(char *s);
+char *_strstr(char *haystack, char *needle)
+{
+	int length;
+	int i;
+	int j;
+	int count;
+
+	length = _findlen(haystack);
+
+	for (i = 0; haystack[i] != '\0'; i++)
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			while (haystack[i + j] == needle[j])
+			{
+				count++;
+				j++;
+			}
+			if (count == length)
+			{
+				haystack = &haystack[i];
+				return (haystack);
+			}
+		}
+	return (0);
+}

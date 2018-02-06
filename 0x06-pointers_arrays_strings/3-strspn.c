@@ -10,27 +10,20 @@ unsigned int _strspn(char *s, char *accept)
 {
 	int i;
 	int j;
-	int matchcount;
-	int bytecount;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		for (j = 0; accept[j] != '\0'; j++)
 		{
-			matchcount = 0;
-
 			if (s[i] == accept[j])
 			{
-				matchcount++;
+				i++;
 				break;
 			}
 		}
 
-		if (matchcount == 0 && accept[j] == '\0')
-		{
-			bytecount = i;
-			return (bytecount);
-		}
+		if (accept[j] == '\0')
+			return (i);
 	}
 	return (i);
 }
