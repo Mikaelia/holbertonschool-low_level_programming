@@ -9,19 +9,19 @@
   */
 void print_diagsums(int *a, int size)
 {
+	int diag1, diag2;
 	int i;
-	int j;
 
-	total = 0;
-	i = 0;
-	j = 0;
+	diag1 = 0;
+	diag2 = 0;
 
-	while (i < size && j < size)
+	for (i = 0; i < size; i++)
 	{
-		printf("%d", a[i][j]);
-		i++;
-		j++;
+		diag1 += a[(size + 1) * i];
+		diag2 += a[(size - 1) + (size - 1) * i];
 	}
 
+	printf("%d, ", diag1);
+	printf("%d\n", diag2);
 }
 
