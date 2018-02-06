@@ -1,38 +1,44 @@
-int _findlen(char *s)
+/**
+  * _findlen -  finds length of string
+  * @s: string to count
+  *
+  * Return: num bytes in string
+  *
+  */
+int _findlen(*s)
 {
-	int i;
-	int length;
-	length = 0;
+	int count;
 
-	for (i = 0; s[i] != '\0'; i++)
-		length++;
-	return length;
+	for (count = 0; s[count] != '\0'; count++)
+	;
+	return (count);
 }
 
 /**
-  * *_strpbrk -  searches a string for any of a set of bytes
-  * @s: string to search for bytes in accept
-  * @accept: charset to use in searching string
+  * *_strstr -  locates a substring
+  * @haystack: string to search
+  * @needle: substring to search for
   *
-  * Return: num bytes in segment of s which consist only of bytes from accept
+  * Return: pointer to beginning of located substring
   *
   */
-int _findlen(char *s);
 char *_strstr(char *haystack, char *needle)
 {
-	int length;
-	int i;
-	int j;
-	int count;
+	unsigned int length, count, i, j;
 
-	length = _findlen(haystack);
+	length = _findlen(needle);
 
 	for (i = 0; haystack[i] != '\0'; i++)
-		for (j = 0; needle[j] != '\0'; j++)
+	{
+		if (haystack[i] == needle[0])
 		{
-			while (haystack[i + j] == needle[j])
+			j = 0;
+			count = 0;
+
+			while (needle[j] != '\0')
 			{
-				count++;
+				if (haystack[i + j] == needle[j])
+					count++;
 				j++;
 			}
 			if (count == length)
@@ -41,5 +47,6 @@ char *_strstr(char *haystack, char *needle)
 				return (haystack);
 			}
 		}
+	}
 	return (0);
 }
