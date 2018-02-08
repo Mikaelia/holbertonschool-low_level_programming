@@ -2,7 +2,6 @@
 /**
   * findlen - find length of string
   * @s: string
-  * @count: character count
   *
   * Return: string length
   */
