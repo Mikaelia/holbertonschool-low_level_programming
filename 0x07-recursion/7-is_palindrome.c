@@ -6,41 +6,40 @@
   *
   * Return: string length
   */
-int findlen(char *s, int count)
+int findlen(char *s)
 {
 	if (*s)
-	{
-		return (1 + findlen(++s, count));
-	}
+		return (1 + findlen(++s));
 	else
-		return (count);
+		return (0);
 }
 
 /**
-  * comphalves - compares both halves of palindrome
+  * chackpal - compares both halves of palindrome
   * @s: string to test
   * @strlen: length of string
   *
   * Return: 1 for palindrome, 0 otherwise
   */
-int comphalves(char *s, int strlen)
+int checkpal(char *s, int strlen)
 {
+	if (*s == 0)
+		return(1);
 	if (*s)
 	{
 		if (*s == *(s + strlen))
 		{
 			return (1);
 			strlen--;
-			return (comphalves(++s, strlen));
+			return (checkpal(++s, strlen));
 		}
 		else
-			return (0);
+			return(0);
 	}
 	else
 		return (0);
 }
 
-#include "holberton.h"
 /**
   * is_palindrome - checks whether string is palindrome
   * @s: string to compare
@@ -50,16 +49,12 @@ int comphalves(char *s, int strlen)
   */
 int is_palindrome(char *s)
 {
-	int count;
 	int strlen;
 
-	count = 0;
+	strlen = (findlen(s));
+	strlen--;
 
-	if (*s == '\0')
-		return (1);
-	strlen = (findlen(s, (count - 1)));
-
-	return (comphalves(s, strlen));
+	return (checkpal(s, strlen));
 }
 
 
