@@ -15,7 +15,7 @@ int findlen(char *s)
 }
 
 /**
-  * chackpal - compares both halves of palindrome
+  * checkpal - compares both halves of palindrome
   * @s: string to test
   * @strlen: length of string
   *
@@ -29,8 +29,7 @@ int checkpal(char *s, int strlen)
 	{
 		if (*s == *(s + strlen))
 		{
-			return (1);
-			strlen--;
+			strlen -= 2;
 			return (checkpal(++s, strlen));
 		}
 		else
