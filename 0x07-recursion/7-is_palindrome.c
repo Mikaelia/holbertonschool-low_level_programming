@@ -23,8 +23,8 @@ int findlen(char *s)
   */
 int checkpal(char *s, int strlen)
 {
-	if (*s == 0)
-		return(1);
+	if (*s == '\0')
+		return (1);
 	if (*s)
 	{
 		if (*s == *(s + strlen))
@@ -34,7 +34,7 @@ int checkpal(char *s, int strlen)
 			return (checkpal(++s, strlen));
 		}
 		else
-			return(0);
+			return (0);
 	}
 	else
 		return (0);
