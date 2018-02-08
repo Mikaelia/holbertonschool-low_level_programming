@@ -57,7 +57,7 @@ int is_palindrome(char *s)
 
 	if (*s == '\0')
 		return (1);
-	strlen = (findlen(s, count) - 1);
+	strlen = (findlen(s, (count - 1)));
 
 	return (comphalves(s, strlen));
 }
