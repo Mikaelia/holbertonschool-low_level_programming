@@ -2,7 +2,8 @@
 #include <stdio.h>
 /**
   * main - prints name of program
-  *
+  * @argc: number of arguments passed to function
+  * @argv: array of arguements
   *
   * Return: 0
   *
