@@ -3,7 +3,7 @@
   * checkchar - checks to see if any char in a string is a number
   * @argv: string to check
   *
-  * Returns 1 if input contains symbols that are not digits, else 0
+  * Return: 1 if input contains symbols that are not digits, else 0
   */
 int checkchar(char *argv)
 {
@@ -11,7 +11,7 @@ int checkchar(char *argv)
 	{
 		if (*argv < '0' || *argv > '9')
 		{
-			printf ("Error\n");
+			printf("Error\n");
 			return (1);
 		}
 		argv++;
@@ -28,7 +28,7 @@ int checkchar(char *argv)
   * @argc: argument count
   * @argv: array of arguments
   *
-  * Return: If input contains symbols that are not digits, prints "Error" and returns 1, else 0
+  * Return: If input is not a digit, returns 1, else 0
   */
 int main(int argc, char **argv)
 {
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	{
 		if (!(checkchar(argv[i])))
 		{
-			sum += atoi (argv[i]);
+			sum += atoi(argv[i]);
 			i++;
 		}
 		else

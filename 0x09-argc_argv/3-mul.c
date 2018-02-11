@@ -19,8 +19,8 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	mult2 = atoi (argv[2]);
-	mult1 = atoi (argv[1]);
+	mult2 = atoi(argv[2]);
+	mult1 = atoi(argv[1]);
 	printf("%d\n", (mult1 * mult2));
 
 	return (0);
