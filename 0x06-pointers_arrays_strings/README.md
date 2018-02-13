@@ -1,6 +1,6 @@
 # 0x06. C - Even more pointers, arrays and strings
   
-#### A project on:
+## A project on:
 - Pointers and arrays
 - String manipulation
 - Variable scope
