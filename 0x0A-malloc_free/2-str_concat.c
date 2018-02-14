@@ -35,6 +35,11 @@ char *str_concat(char *s1, char *s2)
 	k = 0;
 	l = 0;
 
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
+
 	twostring = (findlength(s1) + findlength(s2) + 1);
 
 	newspace = malloc(twostring * sizeof(char));
