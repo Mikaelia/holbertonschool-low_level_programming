@@ -12,7 +12,7 @@ int findlength(char *s)
 {
 	int length;
 
-	while (*s)
+	while (*s != '\0')
 	{
 		length++;
 		s++;
@@ -36,9 +36,6 @@ char *str_concat(char *s1, char *s2)
 
 	k = 0;
 	l = 0;
-
-	if (s2 == NULL || s1 == NULL)
-		return (NULL);
 
 	twostring = (findlength(s1) + findlength(s2) + 1);
 
