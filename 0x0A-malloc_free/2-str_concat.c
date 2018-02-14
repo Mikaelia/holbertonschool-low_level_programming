@@ -1,5 +1,25 @@
 #include <stdlib.h>
 #include <stdio.h>
+
+/**
+  * findlength - finds length of strings
+  * @s: string to count
+  *
+  *
+  * Return: length of string
+  */
+int findlength(char *s)
+{
+	int length;
+
+	while (*s)
+	{
+		length++;
+		s++;
+	}
+	return (length);
+}
+
 /**
   * *str_concat - concatenates two strings
   * @s1: forst string
@@ -10,31 +30,17 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *newspace;
-	int i;
-	int j;
 	int k;
 	int l;
 	int twostring;
 
-	i = 0;
-	j = 0;
 	k = 0;
 	l = 0;
 
 	if (s2 == NULL || s1 == NULL)
 		return (NULL);
 
-	while (s1[i] != '\0')
-	{
-		i++;
-	}
-	while (s2[j] != '\0')
-	{
-		j++;
-	}
-	j++;
-
-	twostring = i + j;
+	twostring = (findlength(s1) + findlength(s2) + 1);
 
 	newspace = malloc(twostring * sizeof(char));
 
