@@ -45,13 +45,13 @@ char *str_concat(char *s1, char *s2)
 	while (s1[k] != '\0')
 	{
 		newspace[k] = s1[k];
-		++k;
+		k++;
 	}
 	while (s2[l] != '\0')
 	{
 		newspace[k] = s2[l];
-		++l;
-		++k;
+		l++;
+		k++;
 	}
 	newspace[k] = '\0';
 	return (newspace);
