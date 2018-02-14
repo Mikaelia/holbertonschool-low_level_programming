@@ -26,11 +26,11 @@ char *_strdup(char *str)
 	if (s == 0)
 		return (NULL);
 	j  = 0;
-	while (j <= i)
+	while (j < i)
 	{
 		s[j] = str[j];
 		j++;
 	}
-
+	s[i] = '\0';
 	return (s);
 }
