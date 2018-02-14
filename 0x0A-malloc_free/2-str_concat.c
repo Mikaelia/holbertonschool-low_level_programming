@@ -14,8 +14,8 @@ int findlength(char *s)
 
 	while (*s != '\0')
 	{
-		length++;
-		s++;
+		++length;
+		++s;
 	}
 	return (length);
 }
@@ -32,17 +32,19 @@ char *str_concat(char *s1, char *s2)
 	char *newspace;
 	int k;
 	int l;
-	int twostring;
-
+	int twostring, firststring, secondstring;
 	k = 0;
 	l = 0;
 
-	twostring = (findlength(s1) + findlength(s2) + 1);
+	firststring = findlength(s1);
+	secondstring = findlength(s2);
+	twostring = firststring + secondstring + 1;
 
 	newspace = malloc(twostring * sizeof(char));
 
 	if (newspace == NULL)
 		return (NULL);
+
 	while (s1[k] != '\0')
 	{
 		newspace[k] = s1[k];
