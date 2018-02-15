@@ -9,9 +9,10 @@
   */
 unsigned int findlen(char *s)
 {
-	unsigned int len = 0;
+	unsigned int len;
 	int i;
 
+	len = 0;
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -50,7 +51,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	total = len1 + n;
 
-	s = malloc(sizeof(char) * (total + n + 1));
+	s = malloc(sizeof(char) * (total + 1));
 	if (s == '\0')
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
