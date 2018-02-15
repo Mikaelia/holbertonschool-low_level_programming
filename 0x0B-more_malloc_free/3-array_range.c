@@ -2,41 +2,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-  * *string_nconcat - concatenates two strings, n bytes of second string
-  * @s1: string to place in memory
-  * @s2: second string to concatenate
-  * @n: bytes of second string to concatenate
+  * *array_range - creates an array of integers
+  * @min: minimum value
+  * @max: maximum value
   *
   * Return: pointer to the allocated memory
   */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+int *array_range(int min, int max)
 {
-	char *s;
-	unsigned int total, len1, len2, i, j;
+	int total;
+	int j, i;
+	int *s;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	j = 0;
 
-	len1 = findlen(s1);
-	len2 = findlen(s2);
+	if (min > max)
+		return (NULL);
 
-	if (n >= len2)
-		n = len2;
+	total = max - min + 1;
 
-	total = len1 + n;
-
-	s = malloc(sizeof(char) * (total + 1));
+	s = malloc(sizeof(int) * total);
 	if (s == '\0')
 		return (NULL);
-	for (i = 0; s1[i] != '\0'; i++)
-		s[i] = s1[i];
-	for (j = 0; j < n; j++)
+	for (i = min; i <= max; i++)
 	{
-		s[i] = s2[j];
-		i++;
+		s[j] = i;
+		j++;
 	}
-	s[i] = '\0';
 	return (s);
 }
