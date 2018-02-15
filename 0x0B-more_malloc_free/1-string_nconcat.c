@@ -10,11 +10,13 @@
 unsigned int findlen(char *s)
 {
 	unsigned int len = 0;
+	int i;
 
-	while (*s != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
 		len++;
-		s++;
+		i++;
 	}
 	return (len);
 }
@@ -58,5 +60,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[i] = s2[j];
 		i++;
 	}
+	s[i] = '\0';
 	return (s);
 }
