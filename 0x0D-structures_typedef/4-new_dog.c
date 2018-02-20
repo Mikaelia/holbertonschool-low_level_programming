@@ -1,4 +1,6 @@
-
+#include "dog.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
   * _strlen - counts string length
   * @s: reference string
@@ -18,9 +20,6 @@ int _strlen(char *s)
 	return (len);
 }
 
-#include "dog.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
   * copy - copy string to allocated space
   * @s: reference string
@@ -38,10 +37,7 @@ char *copy(char *s)
 	i = 0;
 	dest = malloc(sizeof(char) * length + 1);
 	if (dest == NULL)
-	{
-		free(dest);
 		return (NULL);
-	}
 	while (s[i] != '\0')
 	{
 		dest[i] = s[i];
@@ -50,9 +46,6 @@ char *copy(char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-#include "dog.h"
-#include <stdlib.h>
-#include <stdio.h>
 /**
   * new_dog - creates a new dog
   * @name: first member
@@ -68,14 +61,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *ownercopy;
 
 	namecopy = copy(name);
+	if (namecopy == NULL)
+		return (NULL);
+
 	ownercopy = copy(owner);
+	if (ownercopy == NULL)
+		return (NULL);
 
 	my_dog = (dog_t *)malloc(sizeof(dog_t));
-		if (my_dog == NULL)
-		{
-			free(my_dog);
-			return (NULL);
-		}
+	if (my_dog == NULL)
+	{
+		free(ownercopy);
+		free(namecopy);
+		return (NULL);
+	}
+
 	my_dog->name = namecopy;
 	my_dog->age = age;
 	my_dog->owner = ownercopy;
