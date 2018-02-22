@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "3-calc.h"
 /**
@@ -12,11 +13,6 @@ int main(int argc, char *argv[])
 {
 	int num1, num2, result;
 
-	if (sizeof(argv[2]) > 2)
-	{
-		printf("Error\n");
-		exit(98);
-	}
 	if (argc != 4)
 	{
 		printf("Error\n");
