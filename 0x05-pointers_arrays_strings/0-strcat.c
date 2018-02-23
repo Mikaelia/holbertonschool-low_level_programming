@@ -22,4 +22,5 @@ char *_strcat(char *dest, char *src)
 	}
 	dest[count] = src[i];
 	return (dest);
+
 }
