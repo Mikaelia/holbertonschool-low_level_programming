@@ -36,11 +36,13 @@ void printfloat(va_list a)
   */
 void printstring(va_list a)
 {
- 	char* s;
+	char *s;
+
 	s = va_arg(a, char*);
 	if (s == NULL)
 		printf("(nil)\n");
-	else printf("%s", s);
+	else
+		printf("%s", s);
 }
 /**
   * print_all- prints anything
@@ -61,6 +63,7 @@ void print_all(const char * const format, ...)
 	};
 
 	va_list typelist;
+
 	i = 0;
 	j = 0;
 	s = "";
