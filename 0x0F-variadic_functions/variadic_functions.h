@@ -10,7 +10,7 @@ typedef struct op
 {
 	char *c;
 	void (*p)(va_list a);
-}prints;
+} prints;
 void printchar(va_list a);
 void printint(va_list a);
 void printfloat(va_list a);
