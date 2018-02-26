@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include <stdlile (ops[i].op != NULL)
-25         {
-	 26                 if (*s == *(ops[i].op))
-}b.h>
+#include <stdlib.h>
 #include "3-calc.h"
 /**
   * *get_op_func - selects correct function to perform
