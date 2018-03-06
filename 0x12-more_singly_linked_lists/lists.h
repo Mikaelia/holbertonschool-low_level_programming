@@ -1,5 +1,6 @@
 #ifndef _HEADER_H
 #define _HEADER_H
+#include <stddef.h>
 /**
  * struct listint_s - singly linked list
  * @n: integer
