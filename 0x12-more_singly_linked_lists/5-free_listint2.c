@@ -3,7 +3,7 @@
 #include <stddef.h>
 #include <stdio.h>
 /**
-  * free_listinit2 - a function that frees a list and sets the head to null
+  * free_listint2 - a function that frees a list and sets the head to null
   * @head: address to head of list
   *
   * Return: void
@@ -22,5 +22,4 @@ void free_listint2(listint_t **head)
 		free(ptr);
 	}
 	head = NULL;
-	return;
 }
