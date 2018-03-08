@@ -9,15 +9,11 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i, j;
-	unsigned int sum;
-	unsigned int pow;
+	unsigned int sum, pow;
 	int len;
 
-	len = 0;
-	sum = 0;
+	len = 0, sum = 0, i = 0, j = 0;
 	pow = 1;
-	i = 0;
-	j = 0;
 
 	if (b == NULL)
 		return (0);
@@ -35,9 +31,14 @@ unsigned int binary_to_uint(const char *b)
 	i--;
 	while (len > 1)
 	{
+
+	printf("Power before: %u\n", pow);
 		pow *= 2;
 		len--;
+
+	printf("Power: %u\n", pow);
 	}
+	printf("Power: %u\n", pow);
 	while (i > 0)
 	{
 		sum += ((b[j] - '0') * pow);
