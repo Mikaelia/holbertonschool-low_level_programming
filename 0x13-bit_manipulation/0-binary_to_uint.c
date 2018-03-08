@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int i, j;
 	unsigned int sum;
-	int pow;
+	unsigned int pow;
 	int len;
 
 	len = 0;
