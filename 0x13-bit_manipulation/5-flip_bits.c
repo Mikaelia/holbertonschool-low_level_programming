@@ -9,7 +9,7 @@
   */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int total;
+	unsigned long int total;
 	unsigned int sum;
 	int i;
 
@@ -21,6 +21,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		sum += (total & 1);
 		total = total >> 1;
 	}
-
 	return (sum);
 }
