@@ -28,6 +28,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			(void)previous;
 			return (1);
 		}
+		count++;
+		previous = temp;
+		temp = temp->next;
 		if (count == index)
 		{
 			previous->next = temp->next;
@@ -35,9 +38,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			return (1);
 		}
 
-		count++;
-		previous = temp;
-		temp = temp->next;
 	}
 	return (-1);
 }
