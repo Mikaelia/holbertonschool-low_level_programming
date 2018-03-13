@@ -6,7 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 /**
-  * read_textfile - that reads a text file and prints it to the POSIX standard output
+  * read_textfile - that reads a text file and prints it to standard output
   * @filename: name of file to read from
   * @letters: number of letters it should read and print
   *
@@ -18,6 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int numred;
 	char *buf;
 
+	if (letters <= 0)
+		return (0);
 	buf = malloc(sizeof(char) * letters);
 		if (buf == NULL)
 			return (0);
@@ -25,6 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	fd = open(filename, O_RDWR);
 		if (fd == -1)
 		{
+			free(buf);
 			return (0);
 		}
 	numred = read(fd, buf, letters);
