@@ -18,14 +18,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int numred;
 	char *buf;
 
-	if (letters <= 0)
+	if (letters <= 0 || filename == NULL)
 		return (0);
-	if (filename == NULL)
-		return (0);
-
 	buf = malloc(sizeof(char) * letters);
-		if (buf == NULL)
-			return (0);
+	if (buf == NULL)
+		return (0);
 
 	fd = open(filename, O_RDWR);
 	if (fd == -1)
@@ -38,11 +35,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buf);
 		return (0);
 	}
+	buf[letters + 1] = '\0';
 	write(1, buf, numred);
 
 	free(buf);
 	close(fd);
-
 	return (numred);
 
 }
