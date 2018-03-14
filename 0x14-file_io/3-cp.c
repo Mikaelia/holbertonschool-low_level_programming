@@ -17,7 +17,7 @@ int copy_textfile(const char *filefrom, char *fileto)
 {
 	int fd1, fd2;
 	char *buf;
-	int sz, numred, ret;
+	int sz, numred;
 
 	/* creating buffer */
 
@@ -59,17 +59,18 @@ int copy_textfile(const char *filefrom, char *fileto)
 			exit(99);
 		}
 	}
-
-	free(buf);
-	ret = close(fd1);
-	if (ret == -1)
+	if (sz == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filefrom);
+		exit(98);
+	}
+	if (close(fd1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
 		free(buf);
 		exit(100);
 	}
-	ret = close(fd2);
-	if (ret == -1)
+	if (close(fd2) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		free(buf);
