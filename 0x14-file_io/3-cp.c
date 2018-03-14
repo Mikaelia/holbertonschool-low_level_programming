@@ -37,7 +37,7 @@ int copy_textfile(const char *filefrom, char *fileto)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fileto);
 		free(buf);
-		return (99);
+		exit(99);
 	}
 	/* read from file */
 	while ((numred = read(fd1, buf, 1024)) > 0)
@@ -56,7 +56,7 @@ int copy_textfile(const char *filefrom, char *fileto)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fileto);
 			free(buf);
-			return (99);
+			exit(99);
 		}
 	}
 
@@ -87,18 +87,11 @@ int copy_textfile(const char *filefrom, char *fileto)
   */
 int main(int argc, char **argv)
 {
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	if (argc < 3)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", argv[1]);
-		exit(98);
-	}
 	copy_textfile(argv[1], argv[2]);
 	return (0);
-
 }
