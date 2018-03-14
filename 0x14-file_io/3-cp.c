@@ -29,46 +29,53 @@ int copy_textfile(const char *filefrom, char *fileto)
 	if (fd1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filefrom);
+		free(buf);
 		exit(98);
 	}
 	fd2 = open(fileto, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fileto);
+		free(buf);
 		return (99);
 	}
 	/* read from file */
-	numred = read(fd1, buf, 1024);
-	if (numred == -1)
+	while ((numred = read(fd1, buf, 1024)) > 0)
 	{
-		free(buf);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filefrom);
-		exit(98);
-	}
+		if (numred == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filefrom);
+			free(buf);
+			exit(98);
+		}
 
-	/* write after 1024 bytes */
+		/* write after 1024 bytes */
 
-	sz = write(fd2, buf, 1024);
-	if (sz == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fileto);
-		return (99);
+		sz = write(fd2, buf, numred);
+		if (sz == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fileto);
+			free(buf);
+			return (99);
+		}
 	}
 
 	free(buf);
 	ret = close(fd1);
-	if (ret < 0)
+	if (ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		free(buf);
 		exit(100);
 	}
 	ret = close(fd2);
-	if (ret < 0)
+	if (ret == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
+		free(buf);
 		exit(100);
 	}
-	return (ret);
+	return (0);
 
 }
 /**
