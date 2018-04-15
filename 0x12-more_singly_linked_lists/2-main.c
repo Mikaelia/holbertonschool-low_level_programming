@@ -11,6 +11,7 @@
 int main(void)
 {
     listint_t *head;
+    listint_t *temp;
 
     head = NULL;
     add_nodeint(&head, 0);
@@ -22,5 +23,11 @@ int main(void)
     add_nodeint(&head, 402);
     add_nodeint(&head, 1024);
     print_listint(head);
+    while (head != NULL)
+    {
+	    temp = head;
+	    head = head->next;
+	    free(temp);
+    }
     return (0);
 }

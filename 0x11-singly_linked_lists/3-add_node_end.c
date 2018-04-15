@@ -12,23 +12,23 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new;
-	list_t *last;
+	list_t *findlast;
 	int i;
 
 	if (head == NULL)
 		return (NULL);
+
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-
 	if (*head == NULL)
 		*head = new;
 	else
 	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		findlast = *head;
+		while (findlast->next != NULL)
+			findlast = findlast->next;
+		findlast->next = new;
 	}
 
 	i = 0;
