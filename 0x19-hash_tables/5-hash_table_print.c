@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
   * hash_table_print - a function that prints a hash table
-  * ht: pointer to the hash table
+  * @ht: pointer to the hash table
   *
   * Return: void
   */
