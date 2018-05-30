@@ -53,9 +53,6 @@ void quicksort(int *array, int lo, int hi, size_t size)
 {
 	int pindex;
 
-	if (array == NULL)
-		return;
-
 	if (lo < hi)
 	{
 		pindex = partition(array, lo, hi, size);
