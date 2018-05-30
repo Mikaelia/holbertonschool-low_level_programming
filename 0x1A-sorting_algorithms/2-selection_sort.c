@@ -6,8 +6,7 @@
   */
 void selection_sort(int *array, size_t size)
 {
-	int i, j;
-	int new[size];
+	unsigned int i, j;
 	int tmp;
 	int idx_min;
 
