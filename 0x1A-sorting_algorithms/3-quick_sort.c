@@ -31,7 +31,7 @@ int partition(int *array, int lo, int hi, size_t size)
 
 	for (i = lo; i < hi; i++)
 	{
-		if (array[i] < pivot)
+		if (array[i] <= pivot)
 		{
 			if (pindex != i)
 				swap(&array[pindex], &array[i], size, array);
