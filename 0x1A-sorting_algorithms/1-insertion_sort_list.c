@@ -1,10 +1,8 @@
 #include "sort.h"
 #include <stdio.h>
 /**
-  *
-  *
-  *
-  *
+  * insertion_sort_list - sorts list with insertion sort
+  * @list: list to be sorted
   */
 void insertion_sort_list(listint_t **list)
 {
@@ -14,7 +12,7 @@ void insertion_sort_list(listint_t **list)
 		return;
 
 	runner = (*list)->next;
-	while(runner)
+	while (runner)
 	{
 
 		while (runner->prev && runner->prev->n > runner->n)
@@ -26,7 +24,7 @@ void insertion_sort_list(listint_t **list)
 			runner->prev = runner->prev->prev;
 			runner->next->prev = runner;
 			if (!(runner->prev))
-					*list = runner;
+				*list = runner;
 			else
 				runner->prev->next = runner;
 			print_list(*list);
