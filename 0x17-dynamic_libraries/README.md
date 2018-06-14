@@ -8,7 +8,7 @@ An introductory project on:
 - Ubuntu 14.04
 - gcc 4.8.4
 ## File Descriptions
-### Mandatory
+### Challenges
 **[holberton.h](holberton.h)** - header file containing the prototypes of functions from previous projects.
 
 **[libholberton.so](libholberton.so)** - dynamic library containing all functions found in [holberton.h](holberton.h).
