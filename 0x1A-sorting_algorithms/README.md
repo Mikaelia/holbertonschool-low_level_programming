@@ -14,7 +14,7 @@ An introductory project on:
 
 **[print_list.c](print_list.c)** - function that prints a list.
 
-### Mandatory
+## Challenges
 **[0-bubble_sort.c](0-bubble_sort.c)** - function that sorts an array of integers in ascending order using the bubble sort algorithm.
 
 **[0-O](0-O)** - time complexities for the bubble sort algorithm in the best, average, and worst case scenarios.
