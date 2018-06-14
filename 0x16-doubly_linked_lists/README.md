@@ -5,7 +5,7 @@ An introductory project on:
 ## Requirements
 - Ubuntu 14.04
 - gcc 4.8.4
-## File Descriptions
+
 ### Challenges
 **[lists.h](lists.h)** - Header file containing all function prototypes and the definition of type `dlistint_t`.
 
