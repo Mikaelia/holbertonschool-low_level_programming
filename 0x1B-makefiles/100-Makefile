@@ -6,14 +6,14 @@ NAME=holberton
 
 .PHONY: clean oclean fclean all re
 
-all: $(OBJ) m.h
+all: $(SRC:.c=.o) m.h
 	$(CC) $? -o $(NAME)
 
 clean:
 	$(RM) *~ $(NAME)
 
 oclean:
-	$(RM) $(OBJ)
+	$(RM) $(SRC:.c=.o)
 
 fclean: clean oclean
 
