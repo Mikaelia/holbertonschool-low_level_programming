@@ -1,7 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Werror -Wextra -pedantic
 SRC=holberton.c main.c
-OBJ=$(SRC:.c=.o)
 NAME=holberton
 
 .PHONY: clean oclean fclean all re
