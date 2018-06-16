@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''Island perimeter algorithm'''
+
+
 def island_perimeter(grid):
     height = len(grid)
     prev = []
@@ -13,9 +15,9 @@ def island_perimeter(grid):
             for w in range(1, width - 1):
                 if grid[h][w]:
                     total += 4
-                    if prev[w-1]:
+                    if prev[w - 1]:
                         total -= 2
-                    if grid[h][w-1]:
+                    if grid[h][w - 1]:
                         total -= 2
-                prev[w-1] = grid[h][w]
+                prev[w - 1] = grid[h][w]
     return(total)
