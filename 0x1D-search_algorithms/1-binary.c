@@ -54,14 +54,8 @@ int _binary_search(int *array, int low, int high, int val)
   */
 int binary_search(int *array, size_t size, int value)
 {
-	int index;
 
 	if (!(array))
 		return (-1);
-	index = _binary_search(array, 0, size - 1, value);
-		if (!index)
-			return (-1);
-		else
-			return (index);
-
+	return (_binary_search(array, 0, size - 1, value));
 }
